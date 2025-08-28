@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ===== SEO (setează unic pe fiecare pagină) ===== -->
+    <title>RCB404 – Web developer | Site-uri, SEO & Google Ads</title>
+    <meta
+      name="description"
+      content="Web developer pe înțelesul tuturor. Construiesc site-uri rapide, fac SEO și campanii Google Ads. Soluții complete, clare și practice."
+    />
+    <link rel="canonical" href="https://rcb404.ro/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RCB404" />
+
+    <!-- Open Graph / Twitter (opțional, actualizează URL-urile/imagini) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="RCB404 - Web developer | Site-uri, SEO & Google Ads"
+    />
+    <meta
+      property="og:description"
+      content="Soluții complete: site-uri rapide, SEO și Google Ads – explicate pe înțelesul tuturor."
+    />
+    <meta property="og:url" content="https://rcb404.ro/" />
+    <meta property="og:image" content="/assets/og-cover.jpg" />
+
+    <link rel="icon" type="image/x-icon" href="Poze/logo.webp" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a
+          href="/"
+          class="logo logo--spin logo--pulse logo--glitch"
+          aria-label="RCB404"
+        >
+          <img src="Poze/logo.webp" alt="RCB404" width="120" height="120" />
+        </a>
+
+        <nav class="navbar" aria-label="Principal">
+          <button
+            class="menu-toggle"
+            id="mobileMenu"
+            aria-label="Deschide meniul"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+          <ul class="nav-menu" id="primary-nav">
+            <li>
+              <a href="/index.html" class="nav-link" data-slug="index">Acasă</a>
+            </li>
+            <li>
+              <a href="/despre.html" class="nav-link" data-slug="despre"
+                >Despre</a
+              >
+            </li>
+            <li>
+              <a href="/portofoliu.html" class="nav-link" data-slug="portofoliu"
+                >Portofoliu</a
+              >
+            </li>
+            <li>
+              <a href="/unelte.html" class="nav-link" data-slug="unelte"
+                >Unelte utile</a
+              >
+            </li>
+            <li>
+              <a href="/blog.html" class="nav-link" data-slug="blog">Blog</a>
+            </li>
+            <li>
+              <a href="/contact.html" class="nav-link" data-slug="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="acasa">
+        <div class="container">
+          <h1 class="hero-title">Orice idee poate deveni realitate online</h1>
+          <p class="hero-subtitle">
+            Site-uri, idei și soluții practice, explicate pe înțelesul tuturor.
+          </p>
+          <p>
+            <a class="btn btn-primary" href="/contact.html"
+              >Hai să lucrăm împreună</a
+            >
+            <a class="btn btn-ghost" href="/portofoliu.html"
+              >Vezi portofoliul</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== DESPRE ===== -->
+      <section class="section" id="despre">
+        <div class="container">
+          <h2>Despre mine</h2>
+          <p>
+            Sunt Raul, omul din spatele RCB404. Pasiunea mea pentru web
+            development și marketing digital se îmbină cu interesul pentru
+            tehnologie, finanțe și investiții. Îmi place să transform ideile în
+            proiecte clare: site-uri de prezentare, tool-uri interactive și
+            articole care explică simplu concepte complicate. Cred că orice idee
+            poate deveni realitate.
+          </p>
+          <p>
+            <a class="link" href="/despre.html">Află mai multe despre mine →</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== BLOG ===== -->
+      <section class="section alt" id="blog">
+        <div class="container">
+          <h2>Blog</h2>
+          <p>
+            Articole care explică pe înțelesul tuturor concepte din web
+            development, marketing digital și finanțe personale – cu exemple
+            aplicabile imediat.
+          </p>
+          <p><a class="link" href="/blog.html">Citește articolele →</a></p>
+        </div>
+      </section>
+
+      <!-- ===== PORTOFOLIU ===== -->
+      <section class="section" id="portofoliu">
+        <div class="container">
+          <h2>Portofoliu</h2>
+          <p>
+            Proiecte reale: site-uri de prezentare și tool-uri interactive.
+            Atenție la detalii, performanță și UX curat.
+          </p>
+          <p><a class="link" href="/portofoliu.html">Vezi proiectele →</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <ul class="footer-menu" aria-label="Meniu footer">
+          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/despre.html">Despre</a></li>
+          <li><a href="/portofoliu.html">Portofoliu</a></li>
+          <li><a href="/unelte.html">Unelte utile</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <p>
+          © <span id="year"></span> RCB404. Toate drepturile rezervate.
+          <a
+            href="https://www.linkedin.com/in/rcb404"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn RCB404"
+            >LinkedIn</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===== Script-uri mici (poți muta într-un main.js) ===== -->
+    <script>
+      // An curent
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle meniu mobil
+      const btn = document.getElementById("mobileMenu");
+      const nav = document.getElementById("primary-nav");
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+
+      // Setare link activ în meniu (în funcție de pagină)
+      (function setActiveNav() {
+        const path = location.pathname.replace(/\/+$/, "");
+        const slug =
+          path === "" || path.endsWith("/index.html") || path.endsWith("/")
+            ? "index"
+            : path.split("/").pop().replace(".html", "");
+        document.querySelectorAll(".nav-link").forEach((a) => {
+          if (a.dataset.slug === slug) {
+            a.classList.add("active");
+            a.setAttribute("aria-current", "page");
+          }
+        });
+      })();
+    </script>
+
+    <!-- ===== JSON-LD (schema.org) ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RCB404 (Raul Bucioacă)",
+        "url": "https://rcb404.ro/",
+        "jobTitle": "Web Developer",
+        "sameAs": ["https://www.linkedin.com/in/rcb404"]
+      }
+    </script>
+  </body>
+</html>

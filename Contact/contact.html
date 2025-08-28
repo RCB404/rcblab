@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="icon" type="image/x-icon" href="../poze/logo.webp" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a
+          href="../index.html"
+          class="logo logo--spin logo--pulse logo--glitch"
+          aria-label="RCB404"
+        >
+          <img src="../poze/logo.webp" alt="RCB404" width="120" height="120" />
+        </a>
+
+        <nav class="navbar" aria-label="Principal">
+          <button
+            class="menu-toggle"
+            id="mobileMenu"
+            aria-label="Deschide meniul"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+
+          <ul class="nav-menu" id="primary-nav">
+            <li>
+              <a href="../index.html" class="nav-link" data-slug="index"
+                >Acasă</a
+              >
+            </li>
+            <li>
+              <a href="../about/about.html" class="nav-link" data-slug="about"
+                >Despre mine</a
+              >
+            </li>
+            <li>
+              <a
+                href="../services/services.html"
+                class="nav-link"
+                data-slug="services"
+                >Servicii</a
+              >
+            </li>
+            <li>
+              <a
+                href="../portfolio/portfolio.html"
+                class="nav-link"
+                data-slug="portfolio"
+                >Portofoliu</a
+              >
+            </li>
+            <li>
+              <a href="../blog/blog.html" class="nav-link" data-slug="blog"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="../contact/contact.html"
+                class="nav-link active"
+                data-slug="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section contact" id="contact">
+        <div class="container">
+          <h1>Contact</h1>
+          <p class="muted">
+            Daca ai intrebari sau doresti o colaborare, nu ezita sa ma
+            contactezi
+          </p>
+
+          <!-- ===== metode rapide ===== -->
+          <div class="contact-methods">
+            <div class="contact-mail">
+              <h2>Email</h2>
+              <p>
+                <a href="mailto:rcblab404@gmail.com">rcblab404@gmail.com</a>
+              </p>
+            </div>
+
+            <div class="contact-github">
+              <h2>GitHub</h2>
+              <p>
+                <a href="https://github.com/RCB404" target="_blank"
+                  >Profil GitHub</a
+                >
+              </p>
+            </div>
+
+            <div class="contact-wapp">
+              <h2>WhatsApp</h2>
+              <p>
+                <a href="https://wa.me/40762689452" target="_blank"
+                  >Chat pe WhatsApp</a
+                >
+              </p>
+            </div>
+
+            <div class="contact-telefon">
+              <h2>Telefon</h2>
+              <p><a href="tel:+40762689452">+40 762 689 452</a></p>
+            </div>
+          </div>
+          <!-- ===== /metode rapide ===== -->
+
+          <!-- Formularul e deja separat prin clasa contact-form -->
+          <form
+            action="https://formspree.io/f/mayvwbjq"
+            method="POST"
+            class="contact-form"
+          >
+            <div class="form-group">
+              <label for="name">Nume:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mesaj:</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn">Trimite</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <ul class="footer-menu" aria-label="Meniu footer">
+          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/despre.html">Despre</a></li>
+          <li><a href="/portofoliu.html">Portofoliu</a></li>
+          <li><a href="/unelte.html">Unelte utile</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <p>
+          © <span id="year"></span> RCB404. Toate drepturile rezervate.
+          <a
+            href="https://www.linkedin.com/in/rcb404"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn RCB404"
+            >LinkedIn</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // An curent
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle meniu mobil
+      const btn = document.getElementById("mobileMenu");
+      const nav = document.getElementById("primary-nav");
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+
+      // Setare link activ în meniu (în funcție de pagină)
+      (function setActiveNav() {
+        const path = location.pathname.replace(/\/+$/, "");
+        const slug =
+          path === "" || path.endsWith("/index.html") || path.endsWith("/")
+            ? "index"
+            : path.split("/").pop().replace(".html", "");
+        document.querySelectorAll(".nav-link").forEach((a) => {
+          if (a.dataset.slug === slug) {
+            a.classList.add("active");
+            a.setAttribute("aria-current", "page");
+          }
+        });
+      })();
+    </script>
+
+    <!-- ===== JSON-LD (schema.org) ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RCB404 (Raul Bucioacă)",
+        "url": "https://rcb404.ro/",
+        "jobTitle": "Web Developer",
+        "sameAs": ["https://www.linkedin.com/in/rcb404"]
+      }
+    </script>
+  </body>
+</html>

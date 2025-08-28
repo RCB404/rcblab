@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articole blog, tutoriale</title>
+    <meta
+      name="description"
+      content="Articole blog, tutoriale programare, web development, vs code, html, css, javascript, react, node.js"
+    />
+    <meta
+      name="keywords"
+      content="blog, tutoriale, programare, web development, vs code, html, css, javascript, react, node.js"
+    />
+    <meta name="author" content="RCB404" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="icon" type="image.webp" href="../Poze/logo.webp" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a
+          href="../index.html"
+          class="logo logo--spin logo--glitch"
+          aria-label="RCB404"
+        >
+          <img src="../Poze/logo.webp" alt="RCB404" width="120" height="120" />
+        </a>
+        <nav class="navbar" aria-label="Principal">
+          <button
+            class="menu-toggle"
+            id="mobileMenu"
+            aria-label="Deschide meniu"
+            aria-controls="primary-nav"
+            aria-expander="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="nav-menu" id="primary-nav">
+            <li>
+              <a href="../index.html" class="nav-link" data-slug="index"
+                >Acasă</a
+              >
+            </li>
+            <li>
+              <a href="../about/about.html" class="nav-link" data-slug="about"
+                >Despre mine</a
+              >
+            </li>
+            <li>
+              <a
+                href="../services/services.html"
+                class="nav-link"
+                data-slug="services"
+                >Servicii</a
+              >
+            </li>
+            <li>
+              <a
+                href="../portfolio/portfolio.html"
+                class="nav-link"
+                data-slug="portfolio"
+                >Portofoliu</a
+              >
+            </li>
+            <li>
+              <a href="../blog/blog.html" class="nav-link" data-slug="blog"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="../contact/contact.html"
+                class="nav-link"
+                data-slug="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="blog">
+        <div class="container">
+          <h1>Banuiesc ca aici venim cu un titlu</h1>
+          <p>aici un text rapid</p>
+        </div>
+      </section>
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol1.html">Titlu Articol1</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol1</p>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol2.html">Titlu Articol2</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol2</p>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol3.html">Titlu Articol3</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol3</p>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol4.html">Titlu Articol4</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol4</p>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol5.html">Titlu Articol5</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol5</p>
+        </div>
+      </article>
+    </main>
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Ai un proiect în minte?</h2>
+        <a href="../contact/contact.html" class="btn">Contactează-mă</a>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <ul class="footer-menu" aria-label="Meniu footer">
+          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/despre.html">Despre</a></li>
+          <li><a href="/portofoliu.html">Portofoliu</a></li>
+          <li><a href="/unelte.html">Unelte utile</a></li>
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <p>
+          © <span id="year"></span> RCB404. Toate drepturile rezervate.
+          <a
+            href="https://www.linkedin.com/in/rcb404"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn RCB404"
+            >LinkedIn</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // An curent
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle meniu mobil
+      const btn = document.getElementById("mobileMenu");
+      const nav = document.getElementById("primary-nav");
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+
+      // Setare link activ în meniu (în funcție de pagină)
+      (function setActiveNav() {
+        const path = location.pathname.replace(/\/+$/, "");
+        const slug =
+          path === "" || path.endsWith("/index.html") || path.endsWith("/")
+            ? "index"
+            : path.split("/").pop().replace(".html", "");
+        document.querySelectorAll(".nav-link").forEach((a) => {
+          if (a.dataset.slug === slug) {
+            a.classList.add("active");
+            a.setAttribute("aria-current", "page");
+          }
+        });
+      })();
+    </script>
+
+    <!-- ===== JSON-LD (schema.org) ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RCB404 (Raul Bucioacă)",
+        "url": "https://rcb404.ro/",
+        "jobTitle": "Web Developer",
+        "sameAs": ["https://www.linkedin.com/in/rcb404"]
+      }
+    </script>
+  </body>
+</html>
