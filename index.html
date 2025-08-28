@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- ===== SEO (setează unic pe fiecare pagină) ===== -->
-    <title>RCB404 - Web developer | Site-uri, SEO & Google Ads</title>
+    <!-- ===== SEO ===== -->
+    <title>RCB404 – Web developer | Site-uri, SEO & Google Ads</title>
     <meta
       name="description"
       content="Web developer pe înțelesul tuturor. Construiesc site-uri rapide, fac SEO și campanii Google Ads. Soluții complete, clare și practice."
@@ -14,7 +14,7 @@
     <meta name="robots" content="index, follow" />
     <meta name="author" content="RCB404" />
 
-    <!-- Open Graph / Twitter -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
@@ -49,9 +49,8 @@
             aria-controls="primary-nav"
             aria-expanded="false"
           >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
           </button>
 
           <ul class="nav-menu" id="primary-nav">
@@ -184,7 +183,6 @@
       </div>
     </footer>
 
-    <!-- ===== Script-uri mici ===== -->
     <script>
       // An curent
       document.getElementById("year").textContent = new Date().getFullYear();
@@ -198,7 +196,7 @@
         nav.classList.toggle("open");
       });
 
-      // Setare link activ în meniu (în funcție de pagină)
+      // Setare link activ
       (function setActiveNav() {
         const path = location.pathname.replace(/\/+$/, "");
         const slug =
@@ -214,7 +212,7 @@
       })();
     </script>
 
-    <!-- ===== JSON-LD (schema.org) ===== -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

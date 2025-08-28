@@ -135,11 +135,11 @@ a[href^="#"]:active {
   color: var(--text);
 }
 
-/* ===== Header & Nav (unificat pe toate paginile) ===== */
+/* ===== Header & Nav ===== */
 .header {
   position: sticky;
   top: 0;
-  z-index: 999; /* peste carduri/shadow */
+  z-index: 999;
   background: rgba(11, 13, 18, 0.7);
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--border);
@@ -167,7 +167,7 @@ a[href^="#"]:active {
   transform-origin: center;
 }
 
-/* Nav baseline */
+/* Nav */
 .navbar {
   position: relative;
 }
@@ -192,7 +192,7 @@ a[href^="#"]:active {
 
 .nav-menu {
   display: flex;
-  gap: 0.5rem; /* mai compact ca pe index */
+  gap: 0.5rem;
   align-items: center;
   list-style: none;
   margin: 0;
@@ -235,7 +235,7 @@ a[href^="#"]:active {
     min-width: 220px;
     box-shadow: var(--shadow);
     display: none;
-    z-index: 1000; /* peste restul */
+    z-index: 1000;
   }
   .nav-menu.open {
     display: flex;
@@ -265,12 +265,11 @@ a[href^="#"]:active {
     filter: drop-shadow(0 0 10px rgba(76, 175, 80, 0.5));
   }
 }
-/* dacă vrei și puls, adaugă clasa .logo--pulse pe <a class="logo ..."> */
 .logo--spin.logo--pulse img {
   animation: spin-slow 20s linear infinite, pulse-soft 3s ease-in-out infinite;
 }
 
-/* Glitch – două straturi peste imaginea reală */
+/* Glitch */
 .logo--glitch::before,
 .logo--glitch::after {
   content: "";
@@ -280,7 +279,6 @@ a[href^="#"]:active {
   opacity: 0;
   pointer-events: none;
 }
-
 .logo--glitch::before {
   filter: hue-rotate(300deg) saturate(2);
 }
@@ -346,7 +344,7 @@ a[href^="#"]:active {
   margin: 0 0 var(--space-3);
 }
 
-/* ===== Typography & content blocks ===== */
+/* ===== Typography ===== */
 h1,
 h2,
 h3 {
@@ -399,7 +397,7 @@ p {
   color: var(--text);
 }
 
-/* ===== Blog basics ===== */
+/* ===== Blog ===== */
 .post-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -443,7 +441,7 @@ p {
   border-radius: 12px;
 }
 
-/* ===== Accessibility & motion ===== */
+/* ===== Accessibility ===== */
 :focus-visible {
   outline: 2px solid var(--brand-2);
   outline-offset: 2px;
@@ -460,7 +458,7 @@ p {
   }
 }
 
-/* ===== Optional light mode (via .light pe <body>) ===== */
+/* Light mode */
 body.light {
   --bg: #f7f8fb;
   --surface: #ffffff;
@@ -472,11 +470,7 @@ body.light .nav-link.active {
   background: rgba(76, 175, 80, 0.12);
 }
 
-/* ===========================
-   DESPRE (pag. About)
-   =========================== */
-
-/* O singură coloană – nu mai avem aside */
+/* ===== DESPRE ===== */
 .about-grid {
   display: block;
 }
@@ -489,7 +483,6 @@ body.light .nav-link.active {
   scroll-margin-top: 96px;
 }
 
-/* CTA links + callout la final */
 .calltoaction {
   margin-top: var(--space-5);
   display: grid;
@@ -516,14 +509,11 @@ body.light .nav-link.active {
   text-decoration: none;
   transform: translateY(-1px);
 }
-
-/* Evită stilul "active" de meniu în CTA */
 .calltoaction .nav-link.active {
   background: none;
   color: var(--text);
 }
 
-/* Card final */
 .callout {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -550,7 +540,6 @@ body.light .nav-link.active {
   transform: translateY(-1px);
 }
 
-/* Butonul din callout: forțează accentul verde + contrast bun */
 .callout .btn-primary {
   background: var(--brand) !important;
   color: #0a0a0a !important;
@@ -561,17 +550,12 @@ body.light .nav-link.active {
   transform: translateY(-2px);
   filter: brightness(1.05);
 }
-
-/* Opțional: separă vizual callout-ul */
 .callout {
   border: 1px solid var(--border);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
 }
 
-/* ===========================
-   CONTACT (pag. Contact)
-   =========================== */
-
+/* ===== CONTACT ===== */
 .section.contact h1 {
   font-size: var(--fs-5);
   color: var(--brand);
@@ -581,7 +565,6 @@ body.light .nav-link.active {
   margin-bottom: var(--space-3);
 }
 
-/* Metode rapide în grid (mail, LinkedIn, GitHub, WhatsApp, Telefon) */
 .contact-methods {
   display: grid;
   gap: 1rem;
@@ -616,7 +599,6 @@ body.light .nav-link.active {
   text-decoration: underline;
 }
 
-/* Formular la final */
 .contact-form {
   max-width: 780px;
 }
@@ -643,8 +625,6 @@ body.light .nav-link.active {
   border-color: var(--brand);
   outline: 2px solid rgba(76, 175, 80, 0.25);
 }
-
-/* Buton din formular (moștenește .btn global) */
 .contact-form .btn {
   background: var(--brand);
   color: #0a0a0a;

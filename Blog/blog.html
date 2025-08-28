@@ -3,18 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Articole blog, tutoriale</title>
     <meta
       name="description"
-      content="Articole blog, tutoriale programare, web development, vs code, html, css, javascript, react, node.js"
+      content="Articole blog, tutoriale programare, web development, VS Code, HTML, CSS, JavaScript, React, Node.js."
     />
     <meta
       name="keywords"
       content="blog, tutoriale, programare, web development, vs code, html, css, javascript, react, node.js"
     />
+    <link rel="canonical" href="https://rcb404.ro/blog.html" />
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="RCB404" />
-    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Articole blog, tutoriale" />
+    <meta
+      property="og:description"
+      content="Tutoriale și articole utile pentru începători și avansați."
+    />
+    <meta property="og:url" content="https://rcb404.ro/blog.html" />
+    <meta property="og:image" content="../assets/og-cover.jpg" />
+
     <link rel="icon" type="image/webp" href="../poze/logo.webp" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <header class="header">
@@ -26,6 +40,7 @@
         >
           <img src="../poze/logo.webp" alt="RCB404" width="120" height="120" />
         </a>
+
         <nav class="navbar" aria-label="Principal">
           <button
             class="menu-toggle"
@@ -34,10 +49,10 @@
             aria-controls="primary-nav"
             aria-expanded="false"
           >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
           </button>
+
           <ul class="nav-menu" id="primary-nav">
             <li>
               <a href="../index.html" class="nav-link" data-slug="index"
@@ -91,7 +106,7 @@
         </div>
       </section>
 
-      <!-- Articole -->
+      <!-- Listează articolele ca post-card-uri -->
       <article class="post-card">
         <div class="container">
           <h2><a href="articol1.html">Titlu Articol1</a></h2>
@@ -102,7 +117,45 @@
         </div>
       </article>
 
-      <!-- copiezi structură pentru fiecare articol -->
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol2.html">Titlu Articol2</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol2</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol3.html">Titlu Articol3</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol3</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol4.html">Titlu Articol4</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol4</p>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <div class="container">
+          <h2><a href="articol5.html">Titlu Articol5</a></h2>
+          <div class="meta">
+            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
+          </div>
+          <p>Text pe scurt articol5</p>
+        </div>
+      </article>
     </main>
 
     <section class="cta">
