@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="icon" type="image/x-icon" href="../poze/logo.webp" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/webp" href="../poze/logo.webp" />
   </head>
   <body>
     <header class="header">
@@ -26,9 +26,8 @@
             aria-controls="primary-nav"
             aria-expanded="false"
           >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
           </button>
 
           <ul class="nav-menu" id="primary-nav">
@@ -38,24 +37,24 @@
               >
             </li>
             <li>
-              <a href="../about/about.html" class="nav-link" data-slug="about"
-                >Despre mine</a
+              <a
+                href="../despre/despre.html"
+                class="nav-link"
+                data-slug="despre"
+                >Despre</a
               >
             </li>
             <li>
               <a
-                href="../services/services.html"
+                href="../portofoliu/index.html"
                 class="nav-link"
-                data-slug="services"
-                >Servicii</a
-              >
-            </li>
-            <li>
-              <a
-                href="../portfolio/portfolio.html"
-                class="nav-link"
-                data-slug="portfolio"
+                data-slug="portofoliu"
                 >Portofoliu</a
+              >
+            </li>
+            <li>
+              <a href="../unelte/index.html" class="nav-link" data-slug="unelte"
+                >Unelte utile</a
               >
             </li>
             <li>
@@ -75,13 +74,14 @@
         </nav>
       </div>
     </header>
+
     <main>
       <section class="section contact" id="contact">
         <div class="container">
           <h1>Contact</h1>
           <p class="muted">
-            Daca ai intrebari sau doresti o colaborare, nu ezita sa ma
-            contactezi
+            Dacă ai întrebări sau dorești o colaborare, nu ezita să mă
+            contactezi.
           </p>
 
           <!-- ===== metode rapide ===== -->
@@ -118,7 +118,6 @@
           </div>
           <!-- ===== /metode rapide ===== -->
 
-          <!-- Formularul e deja separat prin clasa contact-form -->
           <form
             action="https://formspree.io/f/mayvwbjq"
             method="POST"
@@ -149,15 +148,16 @@
         </div>
       </section>
     </main>
+
     <footer class="footer">
       <div class="container footer-inner">
         <ul class="footer-menu" aria-label="Meniu footer">
-          <li><a href="/index.html">Acasă</a></li>
-          <li><a href="/despre.html">Despre</a></li>
-          <li><a href="/portofoliu.html">Portofoliu</a></li>
-          <li><a href="/unelte.html">Unelte utile</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="../index.html">Acasă</a></li>
+          <li><a href="../despre/despre.html">Despre</a></li>
+          <li><a href="../portofoliu/index.html">Portofoliu</a></li>
+          <li><a href="../unelte/index.html">Unelte utile</a></li>
+          <li><a href="../blog/blog.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
         <p>
           © <span id="year"></span> RCB404. Toate drepturile rezervate.
@@ -185,7 +185,7 @@
         nav.classList.toggle("open");
       });
 
-      // Setare link activ în meniu (în funcție de pagină)
+      // Setare link activ
       (function setActiveNav() {
         const path = location.pathname.replace(/\/+$/, "");
         const slug =
@@ -201,7 +201,7 @@
       })();
     </script>
 
-    <!-- ===== JSON-LD (schema.org) ===== -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

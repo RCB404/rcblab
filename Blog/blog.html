@@ -13,18 +13,18 @@
       content="blog, tutoriale, programare, web development, vs code, html, css, javascript, react, node.js"
     />
     <meta name="author" content="RCB404" />
-    <link rel="stylesheet" href="../CSS/style.css" />
-    <link rel="icon" type="image.webp" href="../Poze/logo.webp" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" type="image/webp" href="../poze/logo.webp" />
   </head>
   <body>
     <header class="header">
       <div class="container header-inner">
         <a
           href="../index.html"
-          class="logo logo--spin logo--glitch"
+          class="logo logo--spin logo--pulse logo--glitch"
           aria-label="RCB404"
         >
-          <img src="../Poze/logo.webp" alt="RCB404" width="120" height="120" />
+          <img src="../poze/logo.webp" alt="RCB404" width="120" height="120" />
         </a>
         <nav class="navbar" aria-label="Principal">
           <button
@@ -32,7 +32,7 @@
             id="mobileMenu"
             aria-label="Deschide meniu"
             aria-controls="primary-nav"
-            aria-expander="false"
+            aria-expanded="false"
           >
             <span class="bar"></span>
             <span class="bar"></span>
@@ -45,24 +45,24 @@
               >
             </li>
             <li>
-              <a href="../about/about.html" class="nav-link" data-slug="about"
-                >Despre mine</a
+              <a
+                href="../despre/despre.html"
+                class="nav-link"
+                data-slug="despre"
+                >Despre</a
               >
             </li>
             <li>
               <a
-                href="../services/services.html"
+                href="../portofoliu/index.html"
                 class="nav-link"
-                data-slug="services"
-                >Servicii</a
-              >
-            </li>
-            <li>
-              <a
-                href="../portfolio/portfolio.html"
-                class="nav-link"
-                data-slug="portfolio"
+                data-slug="portofoliu"
                 >Portofoliu</a
+              >
+            </li>
+            <li>
+              <a href="../unelte/index.html" class="nav-link" data-slug="unelte"
+                >Unelte utile</a
               >
             </li>
             <li>
@@ -82,13 +82,16 @@
         </nav>
       </div>
     </header>
+
     <main class="main">
       <section class="blog">
         <div class="container">
-          <h1>Banuiesc ca aici venim cu un titlu</h1>
-          <p>aici un text rapid</p>
+          <h1>Articole și tutoriale</h1>
+          <p>Aici găsești articole rapide și clare.</p>
         </div>
       </section>
+
+      <!-- Articole -->
       <article class="post-card">
         <div class="container">
           <h2><a href="articol1.html">Titlu Articol1</a></h2>
@@ -98,58 +101,26 @@
           <p>Text pe scurt articol1</p>
         </div>
       </article>
-      <article class="post-card">
-        <div class="container">
-          <h2><a href="articol2.html">Titlu Articol2</a></h2>
-          <div class="meta">
-            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
-          </div>
-          <p>Text pe scurt articol2</p>
-        </div>
-      </article>
-      <article class="post-card">
-        <div class="container">
-          <h2><a href="articol3.html">Titlu Articol3</a></h2>
-          <div class="meta">
-            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
-          </div>
-          <p>Text pe scurt articol3</p>
-        </div>
-      </article>
-      <article class="post-card">
-        <div class="container">
-          <h2><a href="articol4.html">Titlu Articol4</a></h2>
-          <div class="meta">
-            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
-          </div>
-          <p>Text pe scurt articol4</p>
-        </div>
-      </article>
-      <article class="post-card">
-        <div class="container">
-          <h2><a href="articol5.html">Titlu Articol5</a></h2>
-          <div class="meta">
-            <time datetime="2025-08-28">28 August 2025</time> • De RCB404 • HTML
-          </div>
-          <p>Text pe scurt articol5</p>
-        </div>
-      </article>
+
+      <!-- copiezi structură pentru fiecare articol -->
     </main>
+
     <section class="cta">
       <div class="container cta-inner">
         <h2>Ai un proiect în minte?</h2>
         <a href="../contact/contact.html" class="btn">Contactează-mă</a>
       </div>
     </section>
+
     <footer class="footer">
       <div class="container footer-inner">
         <ul class="footer-menu" aria-label="Meniu footer">
-          <li><a href="/index.html">Acasă</a></li>
-          <li><a href="/despre.html">Despre</a></li>
-          <li><a href="/portofoliu.html">Portofoliu</a></li>
-          <li><a href="/unelte.html">Unelte utile</a></li>
-          <li><a href="/blog.html">Blog</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="../index.html">Acasă</a></li>
+          <li><a href="../despre/despre.html">Despre</a></li>
+          <li><a href="../portofoliu/index.html">Portofoliu</a></li>
+          <li><a href="../unelte/index.html">Unelte utile</a></li>
+          <li><a href="../blog/blog.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
         <p>
           © <span id="year"></span> RCB404. Toate drepturile rezervate.
@@ -177,7 +148,7 @@
         nav.classList.toggle("open");
       });
 
-      // Setare link activ în meniu (în funcție de pagină)
+      // Setare link activ
       (function setActiveNav() {
         const path = location.pathname.replace(/\/+$/, "");
         const slug =
@@ -193,7 +164,7 @@
       })();
     </script>
 
-    <!-- ===== JSON-LD (schema.org) ===== -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",

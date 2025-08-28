@@ -276,10 +276,11 @@ a[href^="#"]:active {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("logo.webp") center/contain no-repeat;
+  background: url("../poze/logo.webp") center/contain no-repeat;
   opacity: 0;
   pointer-events: none;
 }
+
 .logo--glitch::before {
   filter: hue-rotate(300deg) saturate(2);
 }
