@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Despre RCB404. Cine sunt, scopul platformei, ce fac</title>
+    <title>Despre RCB404 – laboratorul meu digital</title>
     <meta
       name="description"
-      content="Despre RCB404. Cine sunt, scopul platformei, ce fac"
+      content="Despre RCB404: cine sunt, de ce fac asta și ce găsești pe platformă – web dev, marketing digital, finanțe și unelte practice."
     />
     <link rel="canonical" href="https://rcb404.ro/despre.html" />
     <meta name="robots" content="index, follow" />
@@ -17,21 +17,23 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Despre RCB404. Cine sunt, scopul platformei, ce fac"
+      content="Despre RCB404 – laboratorul meu digital"
     />
     <meta
       property="og:description"
-      content="Despre RCB404. Cine sunt, scopul platformei, ce fac"
+      content="Cine sunt, filosofia, abilitățile, timeline-ul și cum lucrăm împreună."
     />
     <meta property="og:url" content="https://rcb404.ro/despre.html" />
-    <meta property="og:image" content="../assets/og-cover.jpg" />
+    <meta property="og:image" content="https://rcb404.ro/assets/og-cover.jpg" />
 
     <link rel="icon" type="image/webp" href="../poze/logo.webp" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
-    <header class="header">
+    <a href="#main" class="skip-link">Sari la conținut</a>
+
+    <header class="header" role="banner">
       <div class="container header-inner">
         <a
           href="../index.html"
@@ -64,6 +66,7 @@
                 href="../despre/despre.html"
                 class="nav-link"
                 data-slug="despre"
+                aria-current="page"
                 >Despre</a
               >
             </li>
@@ -98,176 +101,169 @@
       </div>
     </header>
 
-    <main id="main">
-      <section class="section about" id="despre">
+    <main id="main" role="main">
+      <!-- HERO / INTRO SCURT -->
+      <section id="about-hero" class="section hero">
         <div class="container">
-          <div class="about-text">
-            <h1>Despre <strong>RCB404</strong> – laboratorul meu digital</h1>
-            <p>
-              Am pornit acest proiect dintr-o idee simplă: orice om poate învăța
-              <strong>web development</strong> și <strong>finanțe</strong>, dacă
-              are explicațiile potrivite și curajul să înceapă.
-            </p>
-            <p>
-              <strong>RCB404</strong> este laboratorul meu digital – locul unde
-              testez, construiesc și împărtășesc ceea ce descopăr. Aici găsești
-              articole explicate simplu, tool-uri practice și proiecte reale,
-              făcute cu răbdare și atenție la detalii.
-            </p>
+          <h1>Despre <strong>RCB404</strong></h1>
+          <p class="lead">
+            Laboratorul meu digital în care ideile devin proiecte reale.
+            Construiesc încet și sigur: <strong>web development</strong>,
+            <strong>marketing digital</strong>, <strong>finanțe</strong> și
+            <strong>unelte</strong> practice.
+          </p>
+        </div>
+      </section>
 
-            <h2>Povestea mea</h2>
-            <p>
-              Nu am pornit ca <strong>programator</strong> de meserie. Am fost
-              curios de tehnologie și am vrut să învăț singur, pas cu pas, cum
-              funcționează un site.
+      <!-- OVERVIEW ÎN 2 COLONNE: "Cine sunt" + "Ce găsești" -->
+      <section id="overview" class="section about">
+        <div class="container grid-2">
+          <article
+            class="card"
+            itemscope
+            itemtype="https://schema.org/AboutPage"
+          >
+            <h2>Pe scurt, cine sunt</h2>
+            <p itemprop="abstract">
+              Nu vin din IT. Am început autodidact cu
+              <strong>HTML &amp; CSS</strong>, am continuat cu
+              <strong>SEO</strong> și <strong>Google Ads</strong>, iar acum
+              îmbin totul în proiecte reale și explicații simple.
             </p>
             <p>
-              Am început cu <strong>HTML și CSS</strong>, apoi am continuat cu
-              <strong
-                >SEO, Google Ads și primele proiecte pentru clienți
-                reali</strong
-              >. De fiecare dată am învățat câte ceva nou și am înțeles că
-              progresul vine din lucruri mici, dar constante.
+              Cred în progresul prin <strong>pași mici și constanți</strong>.
+              Vreau să arăt că se poate învăța autentic, fără scurtături, dar cu
+              structură.
             </p>
+          </article>
 
-            <h3>Filosofia mea</h3>
-            <p>
-              Cred că <strong>orice idee poate deveni realitate</strong>, dacă e
-              explicată pas cu pas și pusă în practică. Îmi bazez munca pe
-              <strong>explicații clare</strong>,
-              <strong>soluții practice</strong> și <strong>răbdare</strong>.
-            </p>
+          <aside class="card" aria-label="Ce găsești aici">
+            <h2>Ce găsești pe site</h2>
+            <ul class="checklist">
+              <li>
+                Articole clare despre <strong>web dev</strong>,
+                <strong>marketing</strong> și <strong>finanțe</strong>.
+              </li>
+              <li>Unelte interactive: calculatoare și mici aplicații utile.</li>
+              <li>
+                Portofoliu cu proiecte reale, explicate pe înțelesul tuturor.
+              </li>
+              <li>Resurse aplicabile imediat în munca ta.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
 
-            <h3>Ce stăpânesc acum</h3>
+      <!-- FILOSOFIE / VALORI -->
+      <section id="filosofie" class="section surface">
+        <div class="container">
+          <h2>Filosofia mea</h2>
+          <p>
+            „<strong>Orice idee poate deveni realitate</strong> dacă o descompui
+            în pași clari și o execuți consecvent.” De aici pornește tot:
+            explicații simple, soluții practice, răbdare.
+          </p>
+        </div>
+      </section>
+
+      <!-- ABILITĂȚI ACTUALE + CE URMEAZĂ -->
+      <section id="skills" class="section about">
+        <div class="container grid-2">
+          <div>
+            <h2>Ce stăpânesc acum</h2>
             <ul>
-              <li><strong>HTML & CSS</strong> – bazele web development-ului</li>
+              <li><strong>HTML &amp; CSS</strong> – fundamente solide.</li>
               <li>
-                <strong>SEO</strong> – optimizare pentru motoarele de căutare
+                <strong>SEO</strong> – structură tehnică și conținut care
+                rankează.
               </li>
               <li>
-                <strong>Google Ads</strong> – campanii online cu rezultate clare
+                <strong>Google Ads</strong> – campanii orientate pe rezultate.
               </li>
               <li>
-                <strong>Tool-uri</strong> precum <strong>GitHub</strong>,
-                <strong>VS Code</strong> și alte unelte esențiale
+                Utilitare: <strong>GitHub</strong>,
+                <strong>VS Code</strong> &amp; co.
               </li>
             </ul>
-            <p>
-              Sunt încă la început de drum și învăț continuu. În prezent mă
-              perfecționez pe HTML, CSS, SEO și Ads. Următorul pas este
-              <strong>JavaScript</strong>, apoi <strong>React</strong> pentru
-              frontend modern și ulterior tehnologii de backend precum
-              <strong>Node.js</strong>.
-            </p>
-
-            <h3>Abordarea mea</h3>
-            <p>
-              Trec împreună cu <strong>clientul</strong> prin tot procesul:
-              punem ideile pe foaie, desenăm structura și creăm interfața pas cu
-              pas. La final explic <strong>ce am făcut și de ce</strong>, astfel
-              încât rezultatul să fie clar și ușor de folosit.
-            </p>
-
-            <h3>Timeline</h3>
+          </div>
+          <div>
+            <h2>Ce urmează</h2>
             <ul>
-              <li>
-                <strong>Iunie 2025</strong> – am început să învăț serios HTML și
-                CSS
-              </li>
-              <li>
-                <strong>August 2025</strong> – am urcat primul proiect online
-              </li>
-              <li>
-                <strong>2026</strong> – obiective:
-                <ul>
-                  <li>minimum 10 pagini web finalizate</li>
-                  <li>să urc site-ul/platforma cât mai sus în Google</li>
-                  <li>
-                    să învăț cât mai multe tehnologii (JavaScript, React,
-                    backend)
-                  </li>
-                </ul>
-              </li>
+              <li><strong>JavaScript</strong> la nivel producție.</li>
+              <li><strong>React</strong> pentru frontend modern.</li>
+              <li><strong>Node.js</strong> &amp; prieteni pentru backend.</li>
             </ul>
+          </div>
+        </div>
+      </section>
 
-            <h3>Ce găsești pe site</h3>
-            <ul>
-              <li>
-                Articole – explicații clare despre
-                <strong>web development, marketing digital și finanțe</strong>.
-              </li>
-              <li>
-                Tool-uri interactive – calculatoare și aplicații mici, gândite
-                să-ți facă viața mai ușoară.
-              </li>
-              <li>
-                Portofoliu – proiecte reale la care am lucrat, exemple practice
-                de ce pot livra.
-              </li>
-              <li>
-                Resurse practice – idei și soluții pe care le poți aplica
-                imediat.
-              </li>
-            </ul>
+      <!-- CUM LUCREZ / PROCES -->
+      <section id="proces" class="section surface">
+        <div class="container">
+          <h2>Abordarea mea</h2>
+          <ol class="process">
+            <li>
+              <strong>Clarificăm ideea</strong> – ce trebuie să facă, pentru
+              cine și de ce.
+            </li>
+            <li><strong>Structurăm</strong> – sitemap, wireframe, conținut.</li>
+            <li><strong>Construim</strong> – interfață, SEO, performanță.</li>
+            <li>
+              <strong>Explic</strong> ce și de ce am făcut, ca să fie ușor de
+              folosit.
+            </li>
+          </ol>
+        </div>
+      </section>
 
-            <h3>De ce fac asta</h3>
-            <p>
-              Cred că orice idee poate deveni realitate, dacă e explicată pas cu
-              pas și pusă în practică.
-              <strong>RCB404</strong> e locul unde adun toate aceste idei și le
-              transform în ceva util.
-            </p>
-
-            <div class="calltoaction">
-              <ul>
-                <li>
-                  <a href="../blog/blog.html" class="nav-link" data-slug="blog"
-                    >Dacă vrei să înveți ceva nou, citește Blogul.</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../portofoliu/index.html"
-                    class="nav-link"
-                    data-slug="portofoliu"
-                    >Dacă vrei să vezi proiecte reale, intră în Portofoliu.</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../contact/contact.html"
-                    class="nav-link"
-                    data-slug="contact"
-                    >Dacă vrei să lucrăm împreună, mergi la Contact.</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="../unelte/index.html"
-                    class="nav-link"
-                    data-slug="unelte"
-                    >Dacă vrei calcule clare și exemple aplicate, verifică
-                    secțiunea Unelte.</a
-                  >
-                </li>
-              </ul>
-
-              <div class="callout">
-                <p>
-                  <strong>Ai o idee și nu știi de unde s-o apuci?</strong><br />
-                  O descompunem în pași clari și o facem reală.
-                </p>
-                <a class="btn btn-primary" href="../contact/contact.html"
-                  >Spune-mi despre proiect</a
-                >
-              </div>
+      <!-- TIMELINE CURAT -->
+      <section id="timeline" class="section about">
+        <div class="container">
+          <h2>Timeline</h2>
+          <dl class="timeline">
+            <div class="t-item">
+              <dt><time datetime="2025-06">Iunie 2025</time></dt>
+              <dd>Încep serios <strong>HTML &amp; CSS</strong>.</dd>
             </div>
+            <div class="t-item">
+              <dt><time datetime="2025-08">August 2025</time></dt>
+              <dd>Urc primul proiect online.</dd>
+            </div>
+            <div class="t-item">
+              <dt><time datetime="2026">2026</time></dt>
+              <dd>
+                <ul>
+                  <li>≥ 10 pagini web finalizate.</li>
+                  <li>
+                    Ridic platforma în Google (SEO + conținut consecvent).
+                  </li>
+                  <li>Învăț JS, React și un backend pragmatic.</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section id="cta" class="section cta surface">
+        <div class="container stack">
+          <p class="lead">
+            <strong>Ai o idee și nu știi de unde să începi?</strong><br />O
+            descompunem în pași clari și o facem reală.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="../contact/contact.html"
+              >Spune-mi despre proiect</a
+            >
+            <a class="btn" href="../blog/blog.html">Citește Blogul</a>
+            <a class="btn" href="../unelte/index.html">Vezi Unelte</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container footer-inner">
         <ul class="footer-menu" aria-label="Meniu footer">
           <li><a href="../index.html">Acasă</a></li>
@@ -303,7 +299,7 @@
         nav.classList.toggle("open");
       });
 
-      // Setare link activ
+      // Setare link activ (fallback dacă nu avem server side active state)
       (function setActiveNav() {
         const path = location.pathname.replace(/\/+$/, "");
         const slug =
@@ -319,15 +315,29 @@
       })();
     </script>
 
-    <!-- JSON-LD -->
+    <!-- JSON-LD: AboutPage + Organization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "RCB404",
-        "url": "https://rcb404.ro/",
-        "logo": "https://rcb404.ro/logo.webp",
-        "sameAs": ["https://www.linkedin.com/in/rcb404"]
+        "@type": "AboutPage",
+        "name": "Despre RCB404",
+        "url": "https://rcb404.ro/despre.html",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "RCB404",
+          "url": "https://rcb404.ro/"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://rcb404.ro/assets/og-cover.jpg"
+        },
+        "about": {
+          "@type": "Organization",
+          "name": "RCB404",
+          "url": "https://rcb404.ro/",
+          "logo": "https://rcb404.ro/logo.webp",
+          "sameAs": ["https://www.linkedin.com/in/rcb404"]
+        }
       }
     </script>
   </body>
