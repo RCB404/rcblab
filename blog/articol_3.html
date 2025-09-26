@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Primii pași practici: instalarea VS Code, extensii și GitHub</title>
+
+    <!-- canonical corect pentru fișierul aflat în /blog/ -->
+    <link rel="canonical" href="https://rcb404.ro/blog/articol_3.html" />
+    <link rel="prev" href="https://rcb404.ro/blog/articol_2.html" />
+    <link rel="next" href="https://rcb404.ro/blog/articol_4.html" />
+
+    <meta
+      name="description"
+      content="Primii pași practici: instalarea VS Code, extensii și GitHub"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RCB404" />
+
+    <!-- Open Graph (minim) -->
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:title"
+      content="Primii pași practici: instalarea VS Code, extensii și GitHub"
+    />
+    <meta property="og:url" content="https://rcb404.ro/blog/articol_3.html" />
+    <!-- recomandat -->
+    <meta
+      property="og:description"
+      content="Instalarea VS Code, setări utile, extensii esențiale și primii pași cu Git & GitHub."
+    />
+
+    <!-- Resurse -->
+    <link rel="icon" type="image/webp" href="../poze/logo.webp" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-inner">
+        <a
+          href="../index.html"
+          class="logo logo--spin logo--pulse logo--glitch"
+          aria-label="RCB404"
+        >
+          <img src="../poze/logo.webp" alt="RCB404" width="120" height="120" />
+        </a>
+
+        <nav class="navbar" aria-label="Principal">
+          <button
+            class="menu-toggle"
+            id="mobileMenu"
+            aria-label="Deschide meniul"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+          >
+            <span class="bar"></span><span class="bar"></span
+            ><span class="bar"></span>
+          </button>
+
+          <ul class="nav-menu" id="primary-nav">
+            <li>
+              <a href="../index.html" class="nav-link" data-slug="index"
+                >Acasă</a
+              >
+            </li>
+            <li>
+              <a
+                href="../despre/despre.html"
+                class="nav-link"
+                data-slug="despre"
+                >Despre</a
+              >
+            </li>
+            <li>
+              <a
+                href="../portofoliu/index.html"
+                class="nav-link"
+                data-slug="portofoliu"
+                >Portofoliu</a
+              >
+            </li>
+            <li>
+              <a href="../unelte/index.html" class="nav-link" data-slug="unelte"
+                >Unelte utile</a
+              >
+            </li>
+            <li>
+              <a href="./blog.html" class="nav-link" data-slug="blog">Blog</a>
+            </li>
+            <li>
+              <a
+                href="../contact/contact.html"
+                class="nav-link"
+                data-slug="contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="article-section">
+        <div class="container">
+          <article class="article-content">
+            <h1>
+              Primii pași practici: instalarea VS Code, extensii și GitHub
+            </h1>
+            <p>
+              În primele articole am vorbit despre motivație și set-up. Acum
+              intrăm în practică: instalăm uneltele și le configurăm corect ca
+              să putem lucra rapid.
+            </p>
+
+            <h2>Instalarea Visual Studio Code</h2>
+            <p>
+              Mergi pe
+              <a
+                href="https://code.visualstudio.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >site-ul oficial</a
+              >
+              și descarcă varianta potrivită pentru sistemul tău (Windows /
+              macOS / Linux).
+            </p>
+
+            <p><strong>Windows</strong> (recomandat „User Installer x64”)</p>
+            <ol>
+              <li>Rulează fișierul <code>.exe</code>.</li>
+              <li>Acceptă termenii și condițiile.</li>
+              <li>
+                Lasă locația implicită pe C: (recomandat pentru update-uri
+                automate și pentru a evita probleme de permisiuni).
+              </li>
+              <li>
+                La „Additional tasks” bifează:
+                <ul>
+                  <li>
+                    Add “Open with Code” în meniul contextual (fișiere și
+                    foldere).
+                  </li>
+                  <li>
+                    Add to PATH (ca să poți rula <code>code</code> din Command
+                    Prompt/PowerShell).
+                  </li>
+                </ul>
+              </li>
+              <li>Install → Finish (poți lăsa „Launch VS Code” bifat).</li>
+            </ol>
+
+            <p><strong>macOS</strong></p>
+            <ol>
+              <li>Descarcă fișierul <code>.zip</code> și dezarhivează-l.</li>
+              <li>
+                Mută Visual Studio Code în folderul Aplicații (Applications).
+              </li>
+              <li>
+                Deschide aplicația (poate apărea un mesaj de la macOS, apasă
+                OK).
+              </li>
+              <li>
+                Ca să poți rula <code>code</code> din Terminal: Command+Shift+P
+                → „Shell Command: Install 'code' command in PATH” → Enter.
+              </li>
+            </ol>
+
+            <p><strong>Linux (Ubuntu/Debian)</strong></p>
+            <ol>
+              <li>Descarcă pachetul <code>.deb</code>.</li>
+              <li>
+                Instalează-l cu dublu-click sau din terminal cu:
+                <code>sudo dpkg -i nume_pachet.deb</code>
+              </li>
+              <li>
+                Dacă apar erori de dependențe, rulează:
+                <code>sudo apt --fix-broken install</code>
+              </li>
+            </ol>
+
+            <h2>Setările de bază (ușoare și utile)</h2>
+            <p>Deschide Settings:</p>
+            <ul>
+              <li>Windows/Linux: <kbd>Ctrl</kbd> + <kbd>,</kbd></li>
+              <li>macOS: <kbd>Command</kbd> + <kbd>,</kbd></li>
+            </ul>
+
+            <p>Recomandări:</p>
+            <ul>
+              <li><strong>Theme:</strong> „Dark+ (default)”.</li>
+              <li>
+                <strong>Editor &gt; Font Size:</strong> 14–16 (confort vizual).
+              </li>
+              <li>
+                <strong>Editor &gt; Word Wrap:</strong> on (să nu iasă liniile
+                în afara ecranului).
+              </li>
+              <li>
+                <strong>Editor &gt; Tab Size:</strong> 2 și
+                <strong>Insert Spaces:</strong> on.
+              </li>
+              <li>
+                <strong>Files &gt; Auto Save:</strong> onFocusChange (salvează
+                când schimbi fereastra).
+              </li>
+              <li>
+                <strong>Language:</strong> recomand engleza (găsești mai ușor
+                soluții pe internet și te obișnuiești cu termenii).
+              </li>
+            </ul>
+
+            <h2>Extensii esențiale</h2>
+            <p>
+              Deschide Extensions (<kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> +
+              <kbd>X</kbd>) și caută/instalează:
+            </p>
+            <ol>
+              <li>
+                <strong>Live Server</strong> (Ritwick Dey)
+                <p>
+                  Click dreapta pe <code>index.html</code> → Open with Live
+                  Server (se deschide în browser și se reîncarcă la salvare).
+                </p>
+              </li>
+
+              <li>
+                <strong>Prettier – Code formatter</strong> (Prettier)
+                <p>După instalare, setează-l ca Default Formatter:</p>
+                <ul>
+                  <li>
+                    Command Palette (<kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> +
+                    <kbd>P</kbd>) → „Format Document With…” → „Configure Default
+                    Formatter…” → Prettier.
+                  </li>
+                  <li>Asigură-te că „Format On Save” este activ.</li>
+                </ul>
+              </li>
+
+              <li>
+                <strong>Auto Rename Tag</strong>
+                <p>
+                  Când modifici un tag HTML, se modifică și tag-ul de închidere.
+                </p>
+              </li>
+
+              <li>
+                <strong>Color Highlight</strong>
+                <p>
+                  Afișează culoarea în cod când folosești coduri hex, rgb, hsl
+                  etc.
+                </p>
+              </li>
+
+              <li>
+                <strong>GitLens</strong>
+                <p>
+                  Îmbunătățește suportul Git în VS Code (vizualizare istoric,
+                  blame etc.).
+                </p>
+              </li>
+
+              <li>
+                <strong>ESLint</strong>
+                <p>
+                  Verifică și aplică regulile de stil pentru JavaScript
+                  (necesită un fișier <code>.eslintrc</code> în proiect).
+                </p>
+              </li>
+            </ol>
+
+            <h2>Git și GitHub (cont + conectare)</h2>
+            <p>
+              Git este un sistem de control al versiunilor, iar GitHub este o
+              platformă online care găzduiește depozite Git. Împreună, acestea
+              îți permit să gestionezi și să colaborezi la proiecte de cod.
+            </p>
+
+            <p><strong>Creează/folosește cont GitHub</strong></p>
+            <ol>
+              <li>
+                Creezi contul
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >aici</a
+                >
+                → Sign up (user, email, parolă).
+              </li>
+              <li>Confirmă emailul.</li>
+            </ol>
+
+            <p>
+              <strong>Conectează VS Code cu GitHub (pentru sync & repo)</strong>
+            </p>
+            <ul>
+              <li>
+                În VS Code, jos stânga (iconița cu rotiță) → Turn on Settings
+                Sync → alege „Sign in with GitHub” → autorizează.
+              </li>
+              <li>
+                Bifează ce să sincronizeze (setări, extensii, keybindings).
+              </li>
+            </ul>
+
+            <p><strong>Verifică Git local</strong></p>
+            <ul>
+              <li>
+                Deschide terminalul integrat (<kbd>Ctrl/Cmd</kbd> +
+                <kbd>`</kbd>) și scrie: <code>git --version</code>
+              </li>
+              <li>
+                Dacă apare versiunea, e instalat. Dacă nu, instalează-l de pe
+                <a
+                  href="https://git-scm.com/downloads"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >git-scm.com</a
+                >.
+              </li>
+            </ul>
+
+            <h2>Primul repository (rapid)</h2>
+            <ol>
+              <li>Creează repo pe GitHub (New → nume, Public/Private).</li>
+              <li>În VS Code, deschide folderul proiectului tău.</li>
+              <li>
+                Deschide terminalul integrat (<kbd>Ctrl/Cmd</kbd> +
+                <kbd>`</kbd>) și inițializează Git:
+                <pre><code>git init
+git add .
+git commit -m "Prima versiune"
+git branch -M main
+git remote add origin https://github.com/&lt;username&gt;/&lt;repo&gt;.git
+git push -u origin main</code></pre>
+                <em
+                  >(înlocuiește &lt;username&gt; și &lt;repo&gt; cu datele
+                  tale)</em
+                >
+              </li>
+            </ol>
+
+            <p>
+              Alternativ, din Source Control (icon cu ramificații) → Publish to
+              GitHub (dacă ești logat în VS Code).
+            </p>
+
+            <h2>Gata atelierul</h2>
+            <p>Acum ai:</p>
+            <ul>
+              <li>VS Code instalat și setat.</li>
+              <li>Extensii de bază.</li>
+              <li>Cont GitHub și repo public.</li>
+            </ul>
+            <p>
+              În articolul următor începem efectiv să scriem cod: structura
+              minimă HTML, pagini, foldere și primul mini-proiect cu Live
+              Server.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="post-nav" aria-label="Navigare articole">
+      <a class="btn btn-ghost prev" href="articol_2.html"
+        >← Set-up pentru începători: programe necesare și extensii utile</a
+      >
+      <a class="btn btn-primary next" href="articol_4.html"
+        >Primii pași practici: VS Code, extensii și GitHub →</a
+      >
+    </nav>
+
+    <div class="more-posts">
+      <a class="btn" href="./blog.html">← Înapoi la toate articolele</a>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <ul class="footer-menu" aria-label="Meniu footer">
+          <li><a href="../index.html">Acasă</a></li>
+          <li><a href="../despre/despre.html">Despre</a></li>
+          <li><a href="../portofoliu/index.html">Portofoliu</a></li>
+          <li><a href="../unelte/index.html">Unelte utile</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+        <p>
+          © <span id="year"></span> RCB404. Toate drepturile rezervate.
+          <a
+            href="https://www.linkedin.com/in/rcb404"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn RCB404"
+            >LinkedIn</a
+          >
+        </p>
+      </div>
+      <hr class="sep" />
+    </footer>
+
+    <script>
+      // An curent
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle meniu mobil
+      const btn = document.getElementById("mobileMenu");
+      const nav = document.getElementById("primary-nav");
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+
+      // Setare link activ (forțează 'blog' pe orice URL care include /blog/)
+      (function setActiveNav() {
+        const path = location.pathname.replace(/\/+$/, "");
+        let slug =
+          path === "" || path.endsWith("/index.html") || path.endsWith("/")
+            ? "index"
+            : path.split("/").pop().replace(".html", "");
+
+        if (path.includes("/blog/")) slug = "blog";
+
+        document.querySelectorAll(".nav-link").forEach((a) => {
+          if (a.dataset.slug === slug) {
+            a.classList.add("active");
+            a.setAttribute("aria-current", "page");
+          }
+        });
+      })();
+    </script>
+
+    <!-- JSON-LD (poți trece pe BlogPosting/Article dacă vrei date de articol) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RCB404 (Raul Bucioacă)",
+        "url": "https://rcb404.ro/",
+        "jobTitle": "Web Developer",
+        "sameAs": ["https://www.linkedin.com/in/rcb404"]
+      }
+    </script>
+  </body>
+</html>

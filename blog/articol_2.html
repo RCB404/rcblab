@@ -259,7 +259,7 @@
                 >-explicații simple și exemple testabile direct în browser.
               </li>
             </ul>
-            <h3>Ce urmează</h3>
+            <h3>Ce urmează:</h3>
             <p>
               În următorul articol vom trece la partea practică: instalăm
               <strong>Visual Studio Code</strong>, adăugăm extensiile esențiale,
@@ -274,11 +274,9 @@
       <a class="btn btn-ghost prev" href="articol_1.html"
         >← Înapoi: Cum am început</a
       >
-      <a
-        class="btn btn-primary next is-disabled"
-        aria-disabled="true"
-        tabindex="-1"
-        >Următorul articol →</a
+
+      <a class="btn btn-primary next" href="articol_3.html"
+        >Primii pași practici: VS Code, extensii și GitHub→</a
       >
     </nav>
     <div class="more-posts">
@@ -307,5 +305,48 @@
       </div>
       <hr class="sep" />
     </footer>
+    <script>
+      // An curent
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle meniu mobil
+      const btn = document.getElementById("mobileMenu");
+      const nav = document.getElementById("primary-nav");
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("open");
+      });
+
+      // Setare link activ (forțează 'blog' pe orice URL care include /blog/)
+      (function setActiveNav() {
+        const path = location.pathname.replace(/\/+$/, "");
+        let slug =
+          path === "" || path.endsWith("/index.html") || path.endsWith("/")
+            ? "index"
+            : path.split("/").pop().replace(".html", "");
+
+        if (path.includes("/blog/")) slug = "blog";
+
+        document.querySelectorAll(".nav-link").forEach((a) => {
+          if (a.dataset.slug === slug) {
+            a.classList.add("active");
+            a.setAttribute("aria-current", "page");
+          }
+        });
+      })();
+    </script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RCB404 (Raul Bucioacă)",
+        "url": "https://rcb404.ro/",
+        "jobTitle": "Web Developer",
+        "sameAs": ["https://www.linkedin.com/in/rcb404"]
+      }
+    </script>
   </body>
 </html>
